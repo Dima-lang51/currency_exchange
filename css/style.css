@@ -1,0 +1,177 @@
+/* ОБНУЛЕНИЕ */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    color: #201d1d;
+    font-family: 'Inter', sans-serif;
+}
+
+body.lock {
+    overflow: hidden;
+  }
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    padding: 0px 24px;
+    margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.page {
+  margin-top: 80px;
+  padding-bottom: 80px;
+  background: #F9FAFB;
+}
+
+.title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #101828;
+  cursor: pointer;
+  padding: 24px 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-bottom: 1px solid #D0D5DD;
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  border-bottom: 1px solid #D0D5DD;
+}
+
+.panel > div {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.day {
+  padding-right: 30px;
+}
+
+
+ul.accordion.active {
+  border:none;
+}
+
+
+.panel > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+}
+
+.panel__list {
+  margin-top: 20px;
+}
+
+.panel > h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.panel__list-item {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+}
+
+.panel__list-item > span {
+  margin-right: 8px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7F56D9;
+}
+
+.panel__list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgb(112, 107, 107);
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  letter-spacing: 1px;
+  bottom: -16px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
